@@ -110,7 +110,7 @@ function getRandomInt(min, max)
 
 }
 client2.on("ready", n =>{
-console.log(new Date().getHours())
+
     client2.setInterval(function play()
     {
      
@@ -131,7 +131,7 @@ console.log(new Date().getHours())
                         var h = parseInt(spl[0])
                         var m = parseInt(spl[1])
                         var date = new Date()
-                        var dh = parseInt(date.getHours()) + 4
+                        var dh = parseInt(date.getHours()) + 3
                         var dm = date.getMinutes()
                         if(dh>=24)
                         {
@@ -170,7 +170,7 @@ console.log(new Date().getHours())
                             var h = parseInt(spl[0])
                             var m = parseInt(spl[1])
                             var date = new Date()
-                             var dh = parseInt(date.getHours()) + 4
+                             var dh = parseInt(date.getHours()) + 3
                         var dm = date.getMinutes()
                         if(dh>=24)
                         {
@@ -210,7 +210,7 @@ console.log(new Date().getHours())
                           var h = parseInt(spl[0])
                           var m = parseInt(spl[1])
                           var date = new Date()
-                           var dh = parseInt(date.getHours()) + 4
+                           var dh = parseInt(date.getHours()) + 3
                         var dm = date.getMinutes()
                         if(dh>=24)
                         {
