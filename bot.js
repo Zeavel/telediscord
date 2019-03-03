@@ -110,7 +110,7 @@ function getRandomInt(min, max)
 
 }
 client2.on("ready", n =>{
-
+console.log(new Date().getHours())
     client2.setInterval(function play()
     {
      
