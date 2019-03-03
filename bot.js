@@ -131,8 +131,12 @@ console.log(new Date().getHours())
                         var h = parseInt(spl[0])
                         var m = parseInt(spl[1])
                         var date = new Date()
-                        var dh = date.getHours()
+                        var dh = parseInt(date.getHours()) + 4
                         var dm = date.getMinutes()
+                        if(dh>=24)
+                        {
+                           dh = dh - 24
+                        }
                         if(dh == h && dm == m )
                         {
                             console.log("yah")
@@ -166,8 +170,12 @@ console.log(new Date().getHours())
                             var h = parseInt(spl[0])
                             var m = parseInt(spl[1])
                             var date = new Date()
-                            var dh = date.getHours()
-                            var dm = date.getMinutes()
+                             var dh = parseInt(date.getHours()) + 4
+                        var dm = date.getMinutes()
+                        if(dh>=24)
+                        {
+                           dh = dh - 24
+                        }
                             if(dh == h && dm == m )
                             {
                                 console.log("yah")
@@ -202,8 +210,12 @@ console.log(new Date().getHours())
                           var h = parseInt(spl[0])
                           var m = parseInt(spl[1])
                           var date = new Date()
-                          var dh = date.getHours()
-                          var dm = date.getMinutes()
+                           var dh = parseInt(date.getHours()) + 4
+                        var dm = date.getMinutes()
+                        if(dh>=24)
+                        {
+                           dh = dh - 24
+                        }
                           if(dh == h && dm == m )
                           {
                               console.log("yah")
