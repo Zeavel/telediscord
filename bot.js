@@ -264,7 +264,7 @@ client2.on("ready", n =>{
             }
         })
    
-    },50000)
+    },58000)
 })
 client2.on("message", message =>
 {
