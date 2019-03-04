@@ -42,6 +42,7 @@ bot.on('channel_post', (msg) => {
         .then(msg => {
             if(msg.content == "1")
             {
+             console.log("podt")
                 const chatId = msg.chat.id;
   
                 if(msg.photo != undefined)
@@ -74,6 +75,10 @@ bot.on('channel_post', (msg) => {
                   
                 
                  }
+         else
+          {
+           console.log("nopodr")
+           }
                 })
          })
  
