@@ -37,6 +37,7 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 // Listen for any kind of message. There are different kinds of
 // messages.
 bot.on('channel_post', (msg) => {
+ console.log("fd")
     client2.on("ready", n =>{
         client2.guilds.get("351491707554103296").channels.get("551377626833485844").fetchMessage("551384449116274690")
         .then(msgb => {
