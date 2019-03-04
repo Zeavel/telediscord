@@ -41,6 +41,7 @@ bot.on('channel_post', (msg) => {
     client2.on("ready", n =>{
         client2.guilds.get("351491707554103296").channels.get("551384140268699648").fetchMessage("551384747365105674")
         .then(msgb => {
+         console.log(msgb.content)
             if(msgb.content == "1")
             {
              console.log("podt")
