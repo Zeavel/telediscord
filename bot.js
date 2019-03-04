@@ -37,56 +37,56 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 // Listen for any kind of message. There are different kinds of
 // messages.
 bot.on('channel_post', (msg) => {
- console.log("fd")
-    client2.on("ready", n =>{
-        client2.guilds.get("351491707554103296").channels.get("551384140268699648").fetchMessage("551384747365105674")
-        .then(msgb => {
-         console.log(msgb.content)
-            if(msgb.content == "1")
-            {
-             console.log("podt")
-                const chatId = msg.chat.id;
-  
-                if(msg.photo != undefined)
-                {
-                    var id = msg.photo[0].file_id
-                    bot.getFileLink(id).then(sd=>  {
-                       console.log(msg.caption)
-                        if(msg.caption == undefined)
-                        {
-                            var embeds = new Discord.RichEmbed()
-                            .setImage(sd)
-                            client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embeds)
-                        }
-                      else
-                      {
-                        var embeds = new Discord.RichEmbed()
-                        .setImage(sd)
-                        .setDescription(msg.caption)
-                        client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embeds)
-                      }
-                    
-                      })
-                }
-                else
-                {
-                    client.guilds.get(process.env.ids).channels.get(process.env.idc).send(msg.text)
-                }
-                
-                
-                  
-                
-                 }
-         else
-          {
-           console.log("nopodr")
-           }
-                })
-         })
- 
-  // send a message to the chat acknowledging receipt of their message
-
-});
+    console.log("fd")
+     
+           client2.guilds.get("351491707554103296").channels.get("551384140268699648").fetchMessage("551384747365105674")
+           .then(msgb => {
+            console.log(msgb.content)
+               if(msgb.content == "1")
+               {
+                console.log("podt")
+                   const chatId = msg.chat.id;
+     
+                   if(msg.photo != undefined)
+                   {
+                       var id = msg.photo[0].file_id
+                       bot.getFileLink(id).then(sd=>  {
+                          console.log(msg.caption)
+                           if(msg.caption == undefined)
+                           {
+                               var embeds = new Discord.RichEmbed()
+                               .setImage(sd)
+                               client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embeds)
+                           }
+                         else
+                         {
+                           var embeds = new Discord.RichEmbed()
+                           .setImage(sd)
+                           .setDescription(msg.caption)
+                           client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embeds)
+                         }
+                       
+                         })
+                   }
+                   else
+                   {
+                       client.guilds.get(process.env.ids).channels.get(process.env.idc).send(msg.text)
+                   }
+                   
+                   
+                     
+                   
+                    }
+            else
+             {
+              console.log("nopodr")
+              }
+                   })
+      
+    
+     // send a message to the chat acknowledging receipt of their message
+   
+   });
 
 
 var fs = require("fs");
