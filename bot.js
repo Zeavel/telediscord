@@ -10,7 +10,7 @@ const TelegramBot = require('node-telegram-bot-api');
 
 
 // Create a bot that uses 'polling' to fetch new updates
-const bot = new TelegramBot(process.env.TELETOKEN, {polling: true,   /*  request: {
+const bot = new TelegramBot(process.env.TELETOK, {polling: true,   /*  request: {
     agentClass: Agent,
     agentOptions: {
         socksHost: "127.0.0.1",
