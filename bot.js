@@ -164,7 +164,7 @@ client2.on("ready", n =>{
               var status = "http://uo.theabyss.ru/"+$("#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(3) > img").attr("src")
               var embed = new Discord.RichEmbed()
               .addField("Текущий online на сервере:",online)
-              .setFooter("Status", status)
+           
               client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embed)
                   }})
                         }
@@ -203,7 +203,7 @@ client2.on("ready", n =>{
                   var status = "http://uo.theabyss.ru/"+$("#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(3) > img").attr("src")
                   var embed = new Discord.RichEmbed()
                   .addField("Текущий online на сервере:",online)
-                  .setFooter("Status", status)
+                  
                   client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embed)
                       }})
                             }
@@ -243,7 +243,7 @@ client2.on("ready", n =>{
                 var status = "http://uo.theabyss.ru/"+$("#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(3) > img").attr("src")
                 var embed = new Discord.RichEmbed()
                 .addField("Текущий online на сервере:",online)
-                .setFooter("Status", status)
+             
                 client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embed)
                     }})
                           }
