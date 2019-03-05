@@ -61,21 +61,21 @@ bot.on('channel_post', (msg) => {
                            {
                                var embeds = new Discord.RichEmbed()
                                .setImage(sd)
-                               client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embeds)
+                               client.guilds.get(process.env.ids1).channels.get(process.env.idc1).send(embeds)
                            }
                          else
                          {
                            var embeds = new Discord.RichEmbed()
                            .setImage(sd)
                            .setDescription(msg.caption)
-                           client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embeds)
+                           client.guilds.get(process.env.ids1).channels.get(process.env.idc1).send(embeds)
                          }
                        
                          })
                    }
                    else
                    {
-                       client.guilds.get(process.env.ids).channels.get(process.env.idc).send(msg.text)
+                       client.guilds.get(process.env.ids1).channels.get(process.env.idc1).send(msg.text)
                    }
                    
                    
@@ -166,7 +166,7 @@ client2.on("ready", n =>{
               var embed = new Discord.RichEmbed()
               .addField("Текущий online на сервере:",online)
            
-              client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embed)
+              client.guilds.get(process.env.ids2).channels.get(process.env.idc2).send(embed)
                   }})
                         }
                       
@@ -205,7 +205,7 @@ client2.on("ready", n =>{
                   var embed = new Discord.RichEmbed()
                   .addField("Текущий online на сервере:",online)
                   
-                  client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embed)
+                  client.guilds.get(process.env.ids2).channels.get(process.env.idc2).send(embed)
                       }})
                             }
                           
@@ -245,7 +245,7 @@ client2.on("ready", n =>{
                 var embed = new Discord.RichEmbed()
                 .addField("Текущий online на сервере:",online)
              
-                client.guilds.get(process.env.ids).channels.get(process.env.idc).send(embed)
+                client.guilds.get(process.env.ids2).channels.get(process.env.idc2).send(embed)
                     }})
                           }
                         
