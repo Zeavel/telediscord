@@ -50,6 +50,7 @@ bot.on('channel_post', (msg) => {
                    if(msg.photo != undefined)
                    {
                        var id = msg.photo[0].file_id
+                       console.log(msg.photo)
                        bot.getFile(id).then(sf=>{
     console.log(sf.file_path)
 })
