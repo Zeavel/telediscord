@@ -1,8 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const client2 = new Discord.Client();
-var sizes = ["551373101229932564", "551373117021356033", "551373131634442240"]
-var sizesm = ["551374007283220480", "551375056144695325", "551375468121817119"]
+const client3 = new Discord.Client();
+var sizes = ["551373101229932564", "551373117021356033", "551373131634442240","558007776446775298", "558007793215471645", "558007804137570334"]
+var sizesm = ["551374007283220480", "551375056144695325", "551375468121817119", "558008460160139266", "558008478833180677", "558007804137570334"]
 const TelegramBot = require('node-telegram-bot-api');
  //const idserver = require("./idserver.json")
 // const idchannel = require("./idchannel.json")
@@ -46,7 +47,12 @@ bot.on('channel_post', (msg) => {
                {
                 console.log("podt")
                    const chatId = msg.chat.id;
-     
+      client2.guilds.get("351491707554103296").channels.get("558694177928380419").fetchMessage("558694659686137867")
+                .then(msgt => {
+       var ser = msgt.content
+        client2.guilds.get("351491707554103296").channels.get("558694177928380419").fetchMessage("558694670906163210")
+                .then(msgc => {
+         var ch1 = msgc.content
                    if(msg.photo != undefined)
                    {
                        var id = msg.photo[msg.photo.length - 1].file_id
@@ -61,23 +67,24 @@ bot.on('channel_post', (msg) => {
                            {
                                var embeds = new Discord.RichEmbed()
                                .setImage(sd)
-                               client.guilds.get(process.env.ids1).channels.get(process.env.idc1).send(embeds)
+                               client.guilds.get(ser).channels.get(ch1).send(embeds)
                            }
                          else
                          {
                            var embeds = new Discord.RichEmbed()
                            .setImage(sd)
                            .setDescription(msg.caption)
-                           client.guilds.get(process.env.ids1).channels.get(process.env.idc1).send(embeds)
+                           client.guilds.get(ser).channels.get(ch1).send(embeds)
                          }
                        
                          })
                    }
                    else
                    {
-                       client.guilds.get(process.env.ids1).channels.get(process.env.idc1).send(msg.text)
+                       client.guilds.get(ser).channels.get(ch1).send(msg.text)
                    }
-                   
+        })
+      })
                    
                      
                    
@@ -139,6 +146,12 @@ client2.on("ready", n =>{
                   {
                     client2.guilds.get("351491707554103296").channels.get("551373101229932564").fetchMessage("551374007283220480")
                     .then(msg3 => {
+                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                .then(msgt => {
+       var ser = msgt.content
+        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
+                .then(msgc => {
+         var ch1 = msgc.content
                         var spl = msg3.content.split(":")
                         var h = parseInt(spl[0])
                         var m = parseInt(spl[1])
@@ -166,10 +179,11 @@ client2.on("ready", n =>{
               var embed = new Discord.RichEmbed()
               .addField("Текущий online на сервере:",online)
            
-              client.guilds.get(process.env.ids2).channels.get(process.env.idc2).send(embed)
+              client.guilds.get(ser).channels.get(ch1).send(embed)
                   }})
                         }
-                      
+                    })
+                })
                     })
                   }
                   if(siz == 2)
@@ -178,6 +192,12 @@ client2.on("ready", n =>{
                       {
                         client2.guilds.get("351491707554103296").channels.get(sizes[i]).fetchMessage(sizesm[i])
                         .then(msg3 => {
+                            client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                            .then(msgt => {
+                   var ser = msgt.content
+                    client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
+                            .then(msgc => {
+                     var ch1 = msgc.content
                             var spl = msg3.content.split(":")
                             var h = parseInt(spl[0])
                             var m = parseInt(spl[1])
@@ -205,10 +225,11 @@ client2.on("ready", n =>{
                   var embed = new Discord.RichEmbed()
                   .addField("Текущий online на сервере:",online)
                   
-                  client.guilds.get(process.env.ids2).channels.get(process.env.idc2).send(embed)
+                  client.guilds.get(ser).channels.get(ch1).send(embed)
                       }})
                             }
-                          
+                        })
+                    })
                         })
                       }
                   }
@@ -218,6 +239,12 @@ client2.on("ready", n =>{
                     {
                       client2.guilds.get("351491707554103296").channels.get(sizes[i]).fetchMessage(sizesm[i])
                       .then(msg3 => {
+                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                        .then(msgt => {
+               var ser = msgt.content
+                client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
+                        .then(msgc => {
+                 var ch1 = msgc.content
                           var spl = msg3.content.split(":")
                           var h = parseInt(spl[0])
                           var m = parseInt(spl[1])
@@ -245,10 +272,158 @@ client2.on("ready", n =>{
                 var embed = new Discord.RichEmbed()
                 .addField("Текущий online на сервере:",online)
              
-                client.guilds.get(process.env.ids2).channels.get(process.env.idc2).send(embed)
+                client.guilds.get(ser).channels.get(ch1).send(embed)
                     }})
                           }
+                        })
+                    })
+                      })
+                    }
+                  }
+                  if(siz == 4)
+                  {
+                    for(i=0;i<4;i++)
+                    {
+                      
                         
+                      client2.guilds.get("351491707554103296").channels.get(sizes[i]).fetchMessage(sizesm[i])
+                      .then(msg3 => {
+                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                        .then(msgt => {
+               var ser = msgt.content
+                client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
+                        .then(msgc => {
+                 var ch1 = msgc.content
+                          var spl = msg3.content.split(":")
+                          var h = parseInt(spl[0])
+                          var m = parseInt(spl[1])
+                          var date = new Date()
+                           var dh = parseInt(date.getHours()) + 3
+                        var dm = date.getMinutes()
+                        if(dh>=24)
+                        {
+                           dh = dh - 24
+                        }
+                          if(dh == h && dm == m )
+                          {
+                              console.log("yah")
+                              var urle = "http://uo.theabyss.ru";
+                  var cheerio = require('cheerio');
+                  var request = require('request');
+            
+                  request(urle, function (error, response, body) {
+                    if (!error) {
+                      
+                      var $ = cheerio.load(body)
+                var name = $("#servers3 > table > tbody > tr:nth-child(3) > td.servName").text()
+                var online = $('#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(2)').text()
+                var status = "http://uo.theabyss.ru/"+$("#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(3) > img").attr("src")
+                var embed = new Discord.RichEmbed()
+                .addField("Текущий online на сервере:",online)
+             
+                client.guilds.get(ser).channels.get(ch1).send(embed)
+                    }})
+                          }
+                        })
+                    })
+                      })
+                    }
+                  }
+                  if(siz == 5)
+                  {
+                    for(i=0;i<5;i++)
+                    {
+                      
+                        
+                      client2.guilds.get("351491707554103296").channels.get(sizes[i]).fetchMessage(sizesm[i])
+                      .then(msg3 => {
+                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                        .then(msgt => {
+               var ser = msgt.content
+                client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
+                        .then(msgc => {
+                 var ch1 = msgc.content
+                          var spl = msg3.content.split(":")
+                          var h = parseInt(spl[0])
+                          var m = parseInt(spl[1])
+                          var date = new Date()
+                           var dh = parseInt(date.getHours()) + 3
+                        var dm = date.getMinutes()
+                        if(dh>=24)
+                        {
+                           dh = dh - 24
+                        }
+                          if(dh == h && dm == m )
+                          {
+                              console.log("yah")
+                              var urle = "http://uo.theabyss.ru";
+                  var cheerio = require('cheerio');
+                  var request = require('request');
+            
+                  request(urle, function (error, response, body) {
+                    if (!error) {
+                      
+                      var $ = cheerio.load(body)
+                var name = $("#servers3 > table > tbody > tr:nth-child(3) > td.servName").text()
+                var online = $('#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(2)').text()
+                var status = "http://uo.theabyss.ru/"+$("#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(3) > img").attr("src")
+                var embed = new Discord.RichEmbed()
+                .addField("Текущий online на сервере:",online)
+             
+                client.guilds.get(ser).channels.get(ch1).send(embed)
+                    }})
+                          }
+                        })
+                    })
+                      })
+                    }
+                  }
+                  if(siz == 6)
+                  {
+                    for(i=0;i<6;i++)
+                    {
+                      
+                        
+                      client2.guilds.get("351491707554103296").channels.get(sizes[i]).fetchMessage(sizesm[i])
+                      .then(msg3 => {
+                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                        .then(msgt => {
+               var ser = msgt.content
+                client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
+                        .then(msgc => {
+                 var ch1 = msgc.content
+                          var spl = msg3.content.split(":")
+                          var h = parseInt(spl[0])
+                          var m = parseInt(spl[1])
+                          var date = new Date()
+                           var dh = parseInt(date.getHours()) + 3
+                        var dm = date.getMinutes()
+                        if(dh>=24)
+                        {
+                           dh = dh - 24
+                        }
+                          if(dh == h && dm == m )
+                          {
+                              console.log("yah")
+                              var urle = "http://uo.theabyss.ru";
+                  var cheerio = require('cheerio');
+                  var request = require('request');
+            
+                  request(urle, function (error, response, body) {
+                    if (!error) {
+                      
+                      var $ = cheerio.load(body)
+                var name = $("#servers3 > table > tbody > tr:nth-child(3) > td.servName").text()
+                var online = $('#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(2)').text()
+                var status = "http://uo.theabyss.ru/"+$("#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(3) > img").attr("src")
+                var embed = new Discord.RichEmbed()
+                .addField("Текущий online на сервере:",online)
+             
+                client.guilds.get(ser).channels.get(ch1).send(embed)
+                    }})
+                          }
+                        })
+                    })
                       })
                     }
                   }
@@ -307,7 +482,7 @@ client.user.setAvatar("./file/"+file).then(()=>{
  
     }
 
-    if(commandIs("info", message))
+    if(commandIs("online", message))
     {
         var urle = "http://uo.theabyss.ru";
         var cheerio = require('cheerio');
@@ -332,4 +507,5 @@ client.user.setAvatar("./file/"+file).then(()=>{
 
 
 client.login(process.env.TOKENDIS1); 
-client2.login(process.env.TOKENDIS2);//вход для бота
+client2.login(process.env.TOKENDIS2);
+client3.login(process.env.TOKENDIS3)//вход для бота
