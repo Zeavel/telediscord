@@ -504,7 +504,29 @@ client.user.setAvatar("./file/"+file).then(()=>{
     }
    
 })
-
+client.on("message", message =>
+{
+  if(commandIs("online", message))
+    {
+        var urle = "http://uo.theabyss.ru";
+        var cheerio = require('cheerio');
+        var request = require('request');
+  
+        request(urle, function (error, response, body) {
+          if (!error) {
+            
+            var $ = cheerio.load(body)
+      var name = $("#servers3 > table > tbody > tr:nth-child(3) > td.servName").text()
+      var online = $('#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(2)').text()
+      var status = "http://uo.theabyss.ru/"+$("#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(3) > img").attr("src")
+      var embed = new Discord.RichEmbed()
+      .addField(name,online)
+      .setFooter("Status", status)
+      message.channel.send(embed)
+          }})
+    
+    }
+})
 
 client.login(process.env.TOKENDIS1); 
 client2.login(process.env.TOKENDIS2);
