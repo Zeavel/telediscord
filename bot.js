@@ -519,9 +519,8 @@ client.on("message", message =>
       var name = $("#servers3 > table > tbody > tr:nth-child(3) > td.servName").text()
       var online = $('#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(2)').text()
       var status = "http://uo.theabyss.ru/"+$("#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(3) > img").attr("src")
-      var embed = new Discord.RichEmbed()
-      .addField(name,online)
-      .setFooter("Status", status)
+     var embed = new Discord.RichEmbed()
+              .addField("Текущий online на сервере:",online)
       message.channel.send(embed)
           }})
     
