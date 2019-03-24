@@ -146,7 +146,7 @@ client2.on("ready", n =>{
                   {
                     client2.guilds.get("351491707554103296").channels.get("551373101229932564").fetchMessage("551374007283220480")
                     .then(msg3 => {
-                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021902371913743a")
+                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021902371913743")
                 .then(msgt => {
        var ser = msgt.content
         client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
