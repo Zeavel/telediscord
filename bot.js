@@ -239,11 +239,14 @@ client2.on("ready", n =>{
                     {
                       client2.guilds.get("351491707554103296").channels.get(sizes[i]).fetchMessage(sizesm[i])
                       .then(msg3 => {
+                          console.log(msg3)
                         client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
                         .then(msgt => {
+                            console.log(msgt)
                var ser = msgt.content
                 client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
                         .then(msgc => {
+                            console.log(msgc)
                  var ch1 = msgc.content
                           var spl = msg3.content.split(":")
                           var h = parseInt(spl[0])
@@ -445,10 +448,7 @@ client2.on("ready", n =>{
               client.guilds.get("351491707554103296").channels.get("551377626833485844").send(embed)
                   }})*/
             }
-            else
-            {
-             
-            }
+         
         })
    
     },58000)
