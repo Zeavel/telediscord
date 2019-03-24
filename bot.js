@@ -146,7 +146,7 @@ client2.on("ready", n =>{
                   {
                     client2.guilds.get("351491707554103296").channels.get("551373101229932564").fetchMessage("551374007283220480")
                     .then(msg3 => {
-                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021902371913743a")
                 .then(msgt => {
        var ser = msgt.content
         client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
@@ -192,7 +192,7 @@ client2.on("ready", n =>{
                       {
                         client2.guilds.get("351491707554103296").channels.get(sizes[i]).fetchMessage(sizesm[i])
                         .then(msg3 => {
-                            client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                            client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021902371913743")
                             .then(msgt => {
                    var ser = msgt.content
                     client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
@@ -240,7 +240,7 @@ client2.on("ready", n =>{
                       client2.guilds.get("351491707554103296").channels.get(sizes[i]).fetchMessage(sizesm[i])
                       .then(msg3 => {
                           console.log(msg3.content)
-                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021902371913743")
                         .then(msgt => {
                             console.log(msgt.content)
                var ser = msgt.content
@@ -291,7 +291,7 @@ client2.on("ready", n =>{
                         
                       client2.guilds.get("351491707554103296").channels.get(sizes[i]).fetchMessage(sizesm[i])
                       .then(msg3 => {
-                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021902371913743")
                         .then(msgt => {
                var ser = msgt.content
                 client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
@@ -340,7 +340,7 @@ client2.on("ready", n =>{
                         
                       client2.guilds.get("351491707554103296").channels.get(sizes[i]).fetchMessage(sizesm[i])
                       .then(msg3 => {
-                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021902371913743")
                         .then(msgt => {
                var ser = msgt.content
                 client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
@@ -389,7 +389,7 @@ client2.on("ready", n =>{
                         
                       client2.guilds.get("351491707554103296").channels.get(sizes[i]).fetchMessage(sizesm[i])
                       .then(msg3 => {
-                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021855810682881")
+                        client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021902371913743")
                         .then(msgt => {
                var ser = msgt.content
                 client2.guilds.get("351491707554103296").channels.get("558021855810682881").fetchMessage("558021912127733848")
