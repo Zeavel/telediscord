@@ -11,16 +11,7 @@ const TelegramBot = require('node-telegram-bot-api');
 
 
 // Create a bot that uses 'polling' to fetch new updates
-const bot = new TelegramBot(process.env.TELETOK, {polling: true,   /*  request: {
-    agentClass: Agent,
-    agentOptions: {
-        socksHost: "127.0.0.1",
-        socksPort: 9150,
-        // If authorization is needed:
-        // socksUsername: process.env.PROXY_SOCKS5_USERNAME,
-        // socksPassword: process.env.PROXY_SOCKS5_PASSWORD
-    }
-}*/} );
+const bot = new TelegramBot(process.env.TELETOK, {polling: true, } );
 
 // Matches "/echo [whatever]"
 bot.onText(/\/echo (.+)/, (msg, match) => {
@@ -104,9 +95,11 @@ bot.on('channel_post', (msg) => {
 var fs = require("fs");
 
 function commandIs(str, msg){
+    return msg.content.toLowerCase().startsWith("!" + str);
+}
+function commandIs2(str, msg){
     return msg.content.toLowerCase().startsWith("-" + str);
 }
-
 function pluck(array) {
     return array.map(function(item) { return item["name"]; });
 }
@@ -455,7 +448,7 @@ client2.on("ready", n =>{
 })
 client2.on("message", message =>
 {
-    if(commandIs("ava", message))
+    if(commandIs2("ava", message))
     {
         var url = message.content.substring(5)
         const fs = require('fs');
@@ -525,6 +518,33 @@ client.on("message", message =>
           }})
     
     }
+})
+client.on("message", message =>
+{
+    if(message.author.bot) return;
+    var cmd = message.content.split("!")[1]
+    console.log(cmd +" wow")
+    if(cmd.split(cmd)[1] == "")
+    {
+        cmd = cmd
+    }
+    else
+    {
+        cmd = cmd.split(" ")[0]
+    }
+    
+    client3.guilds.get("351491707554103296").channels.get("559693081113264135").fetchMessage("559694168432181259")
+    .then(ms=>{
+      var con = ms.content.split("&")
+      if(con.includes(cmd))
+      {
+        client3.guilds.get("351491707554103296").channels.get("559693081113264135").fetchMessage("559694180062986250")
+        .then(mse=>{
+          var mseg = mse.content.split("&")[con.indexOf(cmd)]
+          message.channel.send(mseg)
+        })
+      }
+    })
 })
 
 client.login(process.env.TOKENDIS1); 
