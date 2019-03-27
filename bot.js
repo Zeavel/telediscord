@@ -157,6 +157,8 @@ client2.on("ready", n =>{
                         }
                         if(dh == h && dm == m )
                         {
+                            console.log(parseInt(date.getHours()) + 3)
+                            console.log(client.guilds.get(ser).name + ":"+client.channels.get(ch1).name)
                             console.log("yah")
                             var urle = "http://uo.theabyss.ru";
                 var cheerio = require('cheerio');
@@ -302,6 +304,8 @@ client2.on("ready", n =>{
                         }
                           if(dh == h && dm == m )
                           {
+                            console.log(parseInt(date.getHours()) + 3)
+                            console.log(client.guilds.get(ser).name + ":"+client.channels.get(ch1).name)
                               console.log("yah")
                               var urle = "http://uo.theabyss.ru";
                   var cheerio = require('cheerio');
