@@ -522,7 +522,9 @@ client.on("message", message =>
 client.on("message", message =>
 {
     if(message.author.bot) return;
-    var cmd = message.content.split("!")[1]
+    if(message.content.startsWith("!"))
+    {
+        var cmd = message.content.split("!")[1]
     console.log(cmd +" wow")
     if(cmd.split(cmd)[1] == "")
     {
@@ -544,7 +546,9 @@ client.on("message", message =>
           message.channel.send(mseg)
         })
       }
-    })
+    }) 
+    }
+   
 })
 
 client.login(process.env.TOKENDIS1); 
