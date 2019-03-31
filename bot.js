@@ -556,9 +556,9 @@ client.on("message", message =>
 })
 client2.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
- client.channels.get("561126720959283210").fetchMessage("561127057623613462")
+ client.guilds.get("351491707554103296").channels.get("561126720959283210").fetchMessage("561127057623613462")
  .then(msg=>{
-   client.channels.get("561257588075790336").fetchMessage("561257609915662356")
+   client.guilds.get("351491707554103296").channels.get("561257588075790336").fetchMessage("561257609915662356")
  .then(msg2=>{
   if(msg2.content== "0")
   {
@@ -566,9 +566,9 @@ member.send(msg.content)
   }
     else
     {
-      client.channels.get("561257588075790336").fetchMessage("561257965995294731")
+      client.guilds.get("351491707554103296").guilds.get("351491707554103296").guilds.get("351491707554103296").channels.get("561257588075790336").fetchMessage("561257965995294731")
  .then(ser=>{
-        client.channels.get("561257588075790336").fetchMessage("561257973482258472")
+        client.guilds.get("351491707554103296").guilds.get("351491707554103296").channels.get("561257588075790336").fetchMessage("561257973482258472")
  .then(ch1=>{
        client.guilds.get(ser).channels.get(ch1).send("<@"+member.id+">"+msg.content)
         })
