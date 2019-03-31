@@ -568,11 +568,11 @@ member.send(msg.content)
     else
     {
       client2.guilds.get("351491707554103296").channels.get("561257588075790336").fetchMessage("561257965995294731")
- .then(ser=>{
+ .then(sed=>{
         client2.guilds.get("351491707554103296").channels.get("561257588075790336").fetchMessage("561257973482258472")
- .then(ch1=>{
-         console.log(client2.guilds.get("351491707554103296"))
-       client2.guilds.get(ser).channels.get(ch1).send("<@"+member.id+">"+msg.content)
+ .then(chd=>{
+         console.log(client2.guilds.get(sed))
+       client2.guilds.get(sed).channels.get(chd).send("<@"+member.id+">"+msg.content)
         })
       })
     }
