@@ -555,7 +555,7 @@ client.on("message", message =>
    
 })
 client2.on('guildMemberAdd', member => {
- console.log(client.user.username + " " +client2.user.username + " "+client3.user.username )
+
   // Send the message to a designated channel on a server:
  client2.guilds.get("351491707554103296").channels.get("561126720959283210").fetchMessage("561127057623613462")
  .then(msg=>{
