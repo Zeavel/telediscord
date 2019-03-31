@@ -554,7 +554,7 @@ client.on("message", message =>
     }
    
 })
-client2.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', member => {
 
   // Send the message to a designated channel on a server:
  client2.guilds.get("351491707554103296").channels.get("561126720959283210").fetchMessage("561127057623613462")
@@ -571,8 +571,8 @@ member.send(msg.content)
  .then(sed=>{
         client2.guilds.get("351491707554103296").channels.get("561257588075790336").fetchMessage("561257973482258472")
  .then(chd=>{
-         console.log(client2.guilds.get(sed))
-       client2.guilds.get(sed).channels.get(chd).send("<@"+member.id+">"+msg.content)
+         console.log(sed)
+       client.guilds.get(sed.content).channels.get(chd.content).send("<@"+member.id+">"+msg.content)
         })
       })
     }
