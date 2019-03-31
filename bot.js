@@ -546,8 +546,27 @@ client.on("message", message =>
       {
         client3.guilds.get("351491707554103296").channels.get("559693081113264135").fetchMessage("559694180062986250")
         .then(mse=>{
+            client3.guilds.get("351491707554103296").channels.get("559693081113264135").fetchMessage("561816369620975616")
+            .then(mst=>{
           var mseg = mse.content.split("&")[con.indexOf(cmd)]
-          message.channel.send(mseg)
+             var type = mst.content.split("&")[con.indexOf(cmd)]
+             console.log(type)
+             if(type == "0")
+             {
+                 message.member.send(mseg)
+             }
+             if(type == "2")
+             {
+                message.channel.send(mseg)
+             }
+        else
+        {
+            var server = type.split(":")[0]
+            var chl = type.split(":")[1]
+            if(message.channel.id != chl) return;
+            client.guilds.get(server).channels.get(chl).send(mseg)
+        }
+            })
         })
       }
     }) 
