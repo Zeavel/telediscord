@@ -554,7 +554,10 @@ client.on("message", message =>
     }
    
 })
-
+client2.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+ console.log(member)
+});
 client.login(process.env.TOKENDIS1); 
 client2.login(process.env.TOKENDIS2);
 client3.login(process.env.TOKENDIS3)//вход для бота
