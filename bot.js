@@ -571,7 +571,7 @@ member.send(msg.content)
  .then(ser=>{
         client2.guilds.get("351491707554103296").channels.get("561257588075790336").fetchMessage("561257973482258472")
  .then(ch1=>{
-         console.log(ser + " " + ch1)
+         console.log(client2.guilds.get("351491707554103296"))
        client2.guilds.get(ser).channels.get(ch1).send("<@"+member.id+">"+msg.content)
         })
       })
