@@ -503,8 +503,86 @@ client.user.setAvatar("./file/"+file).then(()=>{
 })
 client.on("message", message =>
 {
+    if(commandIs("rules", message))
+    {
+        var mid = message.author.id
+        client2.guilds.get("351491707554103296").channels.get("562095870313758732").fetchMessage("562095935698632732")
+        .then(ty=>{
+            client2.guilds.get("351491707554103296").channels.get("562095870313758732").fetchMessage("562101123448700929")
+        .then(ms=>{
+            client2.guilds.get("351491707554103296").channels.get("562095870313758732").fetchMessage("562101130667098157")
+        .then(ser=>{
+            client2.guilds.get("351491707554103296").channels.get("562095870313758732").fetchMessage("562101137398824961")
+        .then(ch=>{
+            if(ty.content == "0")
+            {
+               
+                if(message.channel.type != "dm") return;
+                client.users.get(mid).send(ms.content)
+            //    message.member.send(mseg)
+            }
+            if(ty.content == "2")
+            {
+               message.channel.send(ms.content)
+            }
+       else
+       {
+           var server = ser.content
+           var chl = ch.content
+           if(message.channel.id != chl) return;
+           client.guilds.get(server).channels.get(chl).send(ms.content)
+       }
+
+
+
+        })
+        })
+        })
+        })
+    }
+    if(commandIs("help", message))
+    {
+        var mid = message.author.id
+        client2.guilds.get("351491707554103296").channels.get("562095836389965872").fetchMessage("562095968305152010")
+        .then(ty=>{
+            client2.guilds.get("351491707554103296").channels.get("562095836389965872").fetchMessage("562099983482880021")
+        .then(ms=>{
+            client2.guilds.get("351491707554103296").channels.get("562095836389965872").fetchMessage("562099990307274762")
+        .then(ser=>{
+            client2.guilds.get("351491707554103296").channels.get("562095836389965872").fetchMessage("562099997529604106")
+        .then(ch=>{
+            if(ty.content == "0")
+            {
+               
+                if(message.channel.type != "dm") return;
+                client.users.get(mid).send(ms.content)
+            //    message.member.send(mseg)
+            }
+            if(ty.content == "2")
+            {
+               message.channel.send(ms.content)
+            }
+       else
+       {
+           var server = ser.content
+           var chl = ch.content
+           if(message.channel.id != chl) return;
+           client.guilds.get(server).channels.get(chl).send(ms.content)
+       }
+
+
+
+        })
+        })
+        })
+        })
+    }
   if(commandIs("online", message))
     {
+        var mid = message.author.id
+        client2.guilds.get("351491707554103296").channels.get("562095859047858196").fetchMessage("562095953213915136")
+        .then(ms=>{
+
         var urle = "http://uo.theabyss.ru";
         var cheerio = require('cheerio');
         var request = require('request');
@@ -518,9 +596,31 @@ client.on("message", message =>
       var status = "http://uo.theabyss.ru/"+$("#servers3 > table > tbody > tr:nth-child(3) > td:nth-child(3) > img").attr("src")
      var embed = new Discord.RichEmbed()
               .addField("Текущий online на сервере:",online)
-      message.channel.send(embed)
+              if(ms.content == "0")
+              {
+                if(message.channel.type != "dm") return;
+                client.users.get(mid).send(embed)
+              }
+              if(ms.content == "2")
+              {
+                 message.channel.send(embed)
+              }
+              else
+              {
+                client2.guilds.get("351491707554103296").channels.get("562095859047858196").fetchMessage("562098785400913930")
+                .then(ser=>{
+                    client2.guilds.get("351491707554103296").channels.get("562095859047858196").fetchMessage("562098792405663764")
+        .then(ch=>{
+                  var server = ser.content
+                  var chl = ch.content
+                  if(message.channel.id != chl) return;
+                  client.guilds.get(server).channels.get(chl).send(embed)
+
+ })
+        })
+              }
           }})
-    
+        })
     }
 })
 client.on("message", message =>
@@ -528,6 +628,7 @@ client.on("message", message =>
     if(message.author.bot) return;
     if(message.content.startsWith("!"))
     {
+        var mid = message.author.id
         var cmd = message.content.split("!")[1]
     console.log(cmd +" wow")
     if(cmd.split(cmd)[1] == "")
@@ -553,7 +654,10 @@ client.on("message", message =>
              console.log(type)
              if(type == "0")
              {
-                 message.member.send(mseg)
+                
+                 if(message.channel.type != "dm") return;
+                 client.users.get(mid).send(mseg)
+             //    message.member.send(mseg)
              }
              if(type == "2")
              {
@@ -580,6 +684,7 @@ client.on('guildMemberAdd', member => {
  .then(msg=>{
    client2.guilds.get("351491707554103296").channels.get("561257588075790336").fetchMessage("561257609915662356")
  .then(msg2=>{
+     if(msg2.content == "2") return;
   if(msg2.content== "0")
   {
 member.send(msg.content)
